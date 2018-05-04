@@ -1,0 +1,36 @@
+Unix Hands-on
+1. Use find to display the names of all files in the /home subdirectory tree. Can you do this without displaying errors for files you can't read?
+2. Use find to display the names of all files in the system that are bigger than 1MB.
+3. Use find and file to display all files in the /home subdirectory tree, as well as a guess at what sort of a file they are. Do this in two different ways.
+4. Use grep to isolate the line in /etc/passwd that contains your login details.
+5. Use find and grep and sort to display a sorted list of all files in the /home subdirectory tree that contain the word hello somewhere inside them.
+6. Use locate to find all filenames that contain the word emacs. Can you combine this with grep to avoid displaying all filenames containing the word lib?
+7. On Linux systems, the file /dev/urandom is a constantly generated random stream of characters. Can you use this file with od to printout a random decimal number?
+8. Type mount (with no parameters) and try to interpret the output.
+9. Archive the contents of your home directory using tar. Compress the tar file with gzip. Now uncompress and unarchive the .tar.gz file using cat, tar and gzip on one command line.
+10. Use find to compile a list of all directories in the system, redirecting the output so that the list of directories ends up in a file called directories.txt and the list of error messages ends up in a file called errors.txt.
+11. Run sleep 15 in the foreground, suspend it and then put it into the background. Confirm it is running in background. Bring the job back into the foreground
+12. Run sleep 15 in the background, and then use kill to terminate the process by its job number. Repeat, except this time kill the process by specifying its PID.
+13. Run sleep 15 in the background, and then use kill to suspend the process. 
+14. show all processes that are executing.
+15. Display the process hierarchy. Look for the init process. See if you can identify important system daemons. Can you also identify your shell and its subprocesses?
+16. show all processes that you are executing
+17. Start a sleep 300 process running in the background. Log off the server, and log back in again. List all the processes that you are running. What happened to your sleep process? Now repeat, except this time make sure the process is running after logout and login. 
+18. Try combining the commands cat nonexistent and echo hello using each of these operators. 
+19. What does the xargs command do? Can you combine it with find and grep to find yet another way of searching all files in the /home subdirectory tree for the word hello?
+20.  Produce a list of login names and CPU times corresponding to each active process? Can you now (all on the same command line) use sort and head or tail to find the user whose process is using the most CPU?
+21. Use telnet to request a web page from the web server www.google.com by connecting to port 80.
+22. Find the round-trip delay to www.yahoo.com.
+23. See the network route taken to www.yahoo.com. Can you tell which cities your network traffic passes through?
+24. Get a copy of the web page http://www.cloudera.com/index.html. Have a look at the contents of the file. Can you use sed to strip out the HTML tags (text enclosed in < and >)?
+25. List all your processes, using sed to substitute "me" for your username.
+26. Use who, awk, sort and uniq to print out a sorted list of the logins of active users.
+27. Use awk on /etc/passwd to produce a list of users and their login shells.
+28. Write an awk script that prints out all lines in a file except for the first two.
+29. Write a script so that it generates a random secret number between 1 and 100 and then keeps asking the user to guess the secret number until they guess correctly. The script should give the user hints such as "I'm sorry your guess is too low" or "I'm sorry your guess is too high".
+30. Write a shell script which renames all .txt files as .text files. 
+31. Write a shell script called pidof which takes a name as parameter and returns the PID(s) of processes with that name.
+a. Now add a usage()function to your pidof script which prints usage instructions. 
+b. Call usage() if the wrong number of parameters is passed to the script.
+c. All errors should call a function which should print the datetime in YYYMMDDHHMMSS format with the error message.
+32. Modify your .bash_profile script so that your PATH includes the current directory  and so that your editor is set to “vi”. 
