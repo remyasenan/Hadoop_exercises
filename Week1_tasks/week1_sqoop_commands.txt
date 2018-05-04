@@ -1,0 +1,37 @@
+SQOOP IMPORT
+
+
+1. Import table as TEXT file with '\001' delimiter		// dont create the directory 'text' prior
+	
+	sqoop import --connect jdbc:mysql://ybolmpr03.yotabites.com:3306/training --username user1 --password-file /user/remya/mysql_password.txt --table orders --m 1 --as-textfile --fields-terminated-by '\001' --target-dir /user/remya/sqoop/text
+
+2. Import table as AVRO/Parquet in HDFS
+	
+	sqoop import --connect jdbc:mysql://ybolmpr03.yotabites.com:3306/training --username user1 --password-file /user/remya/mysql_password.txt --table customers --m 1 --as-avrodatafile --target-dir /user/remya/sqoop/avro
+
+	 sqoop import --connect jdbc:mysql://ybolmpr03.yotabites.com:3306/training --username user1 --password-file /user/remya/mysql_password.txt --table customers --m 1 --as-parquetfile --target-dir /user/remya/sqoop/parquet
+
+3. Import table as Hive table with ‘^’ delimiter
+
+
+
+4. Import table as Hive Parquet table
+
+	
+
+SQOOP EXPORT
+
+1. Export a TEXT file from HDFS to MySQL
+
+	sqoop export --connect jdbc:mysql://ybolmpr03.yotabites.com:3306/training --username user1 --password-file /user/remya/mysql_password.txt --table orders_sqoop_exported --m 1 --export-dir /user/remya/sqoop/text/part-m-00000 --fields-terminated-by '\001' --lines-terminated-by '\n'
+
+2. Export an AVRO file from HDFS to MySQL
+
+	sqoop export --connect jdbc:mysql://ybolmpr03.yotabites.com:3306/training --username user1 --password-file /user/remya/mysql_password.txt --table orders_sqoop_exported_as_avro --m 1 --export-dir /user/remya/sqoop/avro/orders/part-m-00000.avro
+
+3. Export a Hive table to MySQL
+
+
+
+
+

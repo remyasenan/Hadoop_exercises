@@ -1,0 +1,6 @@
+Step1 : https://apps.twitter.com/  -> Create New App 
+Step2 : Get Consumer Key (API Key), Consumer Secret (API Secret), Access Token, Access Token Secret
+Step3 : Create Flume configuration file with the above keys specified
+Step4 : put the config file in /home/remya (local path in the remote machine)
+Step5 : Execute this command in the command line
+	flume-ng agent --conf conf --conf-file flume_remya.conf --name TwitterAgent

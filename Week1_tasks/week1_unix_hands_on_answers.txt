@@ -1,0 +1,38 @@
+1. find /home -type f -printf "%f\n"
+2. find /home -type f -size +1M
+4. grep 'login' /etc/passwd
+5. find /home -type f -print0 | xargs -0 grep -ri -l "hello"
+6. locate 'emacs' | grep -v 'lib'
+
+9. tar -c -f xyz.tar '/home/' | gzip xyz.tar | gunzip xyz.tar.gz | tar -xzf xyz.tar
+ 	
+11. step1 : sleep 15 
+    step2 : CTRL + Z
+    step3 : bg	
+    step4 : pid=$!
+    step5 : ps -ef | grep $pid
+    step6 : fg
+
+12. step1 : sleep 15 &
+    step2 : jobs
+    step3 : kill %1
+    step4 : sleep 15 &
+    step5 : jobs -l
+    step6 : kill 23456
+    
+13. step1 : sleep 15 &
+    step2 : kill -TSTP $!
+
+14. ps -ef OR ps aux | less
+
+15. pstree	
+
+16. ps -u remya
+
+17. step1 : sleep 300 &
+    step2 : log off the server and login back
+    step3 : ps -ef 	// Process is not running
+    step4 : sleep 300 &
+    step5 : logout and login back
+    step6 : ps -ef      // Process is still running
+  
